@@ -29,6 +29,4 @@ Funções:
 :reNome: Renomeia um arquivo de disco com base no nome original e novo fornecido pelo usuário.
 Finalização:
 
-:end: Encerra o script.
-
 Certifique-se de ter o Wiimms ISO Tool instalado em seu sistema e acessível no caminho do sistema para que o script funcione corretamente.

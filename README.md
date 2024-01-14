@@ -12,12 +12,12 @@ Solicita ao usuário que digite o número correspondente à operação desejada.
 # Execução da Operação Escolhida:
 
 Com base na escolha do usuário, chama a função correspondente. As opções são:
-1 Converte arquivos de WBFS para ISO ou vice-versa.
-2 Renomeia um disco existente.
-3 Extrai pastas de um disco WBFS ou ISO.
-4 Reinsere pastas em um disco WBFS ou ISO.
-5 Converte arquivos de .bmg para .txt.
-6 Converte arquivos de .txt para .bmg.
+ 1 - Converte arquivos de WBFS para ISO ou vice-versa.
+ 2 - Renomeia um disco existente.
+ 3 - Extrai pastas de um disco WBFS ou ISO.
+ 4 - Reinsere pastas em um disco WBFS ou ISO.
+ 5 - Converte arquivos de .bmg para .txt.
+ 6 - Converte arquivos de .txt para .bmg.
 
 # Funções Específicas:
 

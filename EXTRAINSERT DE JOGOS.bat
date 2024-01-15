@@ -1,27 +1,31 @@
 @echo off
-title OTIMIZADOR EXTRAINSERT - Wiimms ISO Tool - LOBO NINTENDISTA
+title OTIMIZADOR EXTRAINSERT - Wiimms ISO/SZS Tools - LOBO NINTENDISTA
 setlocal enabledelayedexpansion
 
 echo.
-echo          ***  EXTRAINSERT - Wiimms ISO Tool  ***
+echo        *** EXTRAINSERT Wiimms ISO/SZS Tool ***
 echo.
-echo          Dica para usar:    Certifique-se de ter  
-echo          instalado  em  seu sistema o aplicativo
-echo          wit (Wiimms ISO Tool). Consulte o site:
-echo          https://wit.wiimm.de/
+echo        Dica para usar:    Certifique-se de ter  
+echo        instalado em seu sistema os aplicativos
+echo        Wiimms ISO Tools: https://wit.wiimm.de/
+echo        Wiimms SZS Tools: https://szs.wiimm.de/
 echo.
-echo          ***************************************
-echo          ******  ESCOLHA UMA PROGRAMACAO  ******
-echo          ***************************************
+echo        ***************************************
+echo        ******  ESCOLHA UMA PROGRAMACAO  ******
+echo        ***************************************
 echo.
-echo  - (CONVERTER: WBFS em ISO ou ISO em WBFS)   = Digite: 1
-echo  - (PARA RENOMEAR UM DISCO EXISTENTE )       = Digite: 2
+echo   * FUNCOES WIT:
 echo.
-echo  - (EXTRAIR PASTAS de DISCO .WBFS ou .ISO)   = Digite: 3
-echo  - (REINSERIR PASTAS em DISCO .WBFS ou .ISO) = Digite: 4
+echo  - (CONVERTER: ISO em WBFS ou WBFS em ISO)  = Digite: 1
+echo  - (PARA RENOMEAR UM DISCO EXISTENTE )      = Digite: 2
 echo.
-echo  - (CONVERTER ARQUIVOS de .bmg para .txt)    = Digite: 5
-echo  - (CONVERTER ARQUIVOS de .txt para .bmg)    = Digite: 6
+echo  - (EXTRAIR ARQUIVO de DISCO .ISO ou .WBFS) = Digite: 3
+echo  - (REFAZER ARQUIVO em DISCO .ISO ou .WBFS) = Digite: 4
+echo.
+echo   * FUNCOES SZS:
+echo.
+echo  - (CONVERTER ARQUIVOS de .bmg para .txt)   = Digite: 5
+echo  - (CONVERTER ARQUIVOS de .txt para .bmg)   = Digite: 6
 echo.
 
 
@@ -56,7 +60,7 @@ set /p input_iso=- Digite o nome do disco com a extensao original (.iso ou .wbfs
 set /p output_iso=- Digite o nome do disco com a extensao que deseja converter (.iso ou .wbfs):
 
 echo.
-echo Convertendo o arquivo...   A CONVERSAO ESTARA PRONTRA QUANDO ESTA TELA FECHAR SOZINHA.
+echo Convertendo o arquivo.   Por favor, aguarde ate que esta tela feche sozinha ...
 echo.
 wit copy %input_iso% %output_iso%
 echo Processo concluido!
@@ -71,7 +75,7 @@ echo.
     goto getUserChoice
 )
 echo.
-echo Extraindo os arquivos...   A EXTRACAO ESTARA PRONTRA QUANDO ESTA TELA FECHAR SOZINHA.
+echo Extraindo os arquivos.   Por favor, aguarde ate que esta tela feche sozinha ...
 echo.
 wit extract "%filename%" hack
 echo.
@@ -88,7 +92,7 @@ echo.
     goto getUserChoice
 )
 echo.
-echo Refazendo um Disco de jogo...   POR FAVOR, AGUARDE ATE QUE ESTA TELA FECHE SOZINHA.
+echo Refazendo um Disco de jogo.   Por favor, aguarde ate que esta tela feche sozinha ...
 echo.
 wit copy hack "%filename%" -o
 echo Processo concluido!
@@ -155,16 +159,3 @@ ren "%nomeOriginal%" "%novoNome%"
 echo Renomeado: "%nomeOriginal%" para "%novoNome%"
 
 endlocal
-
-
-
-
-
-
-
-
-
-
-
-
-
